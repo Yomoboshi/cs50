@@ -1,0 +1,12 @@
+SELECT AVG(energy) AS avg_energy, AVG(valence) AS avg_valence, AVG(danceability) AS avg_danceability FROM songs;
+
+
+possible issues:
+- extreme moods get smoothed out by avg
+- time spent listening to certain songs is not factored
+- if more than 100 songs are listened to frequently, these are not factored in
+- overall music preferences is likely not factored well in activity-based playlists (workout, study, ...)
+
+possible improvements:
+- add time spent listening for songs to include significance of each song (maybe also frequency & recency?)
+- do not calculate with 100 songs automatically, rather calculate with e.g. top 30% songs the user spent 70% time listening tosqlite3
